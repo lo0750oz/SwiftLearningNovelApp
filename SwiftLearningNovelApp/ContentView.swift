@@ -27,6 +27,7 @@ struct ContentView: View {
                     }
                 }
                 .onDelete(perform: deleteItems)
+                .font(.title)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
