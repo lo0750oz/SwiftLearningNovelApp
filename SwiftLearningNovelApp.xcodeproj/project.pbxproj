@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D6E754B2C82125B0074AA9B /* SwiftLearningNovelAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E754A2C82125B0074AA9B /* SwiftLearningNovelAppApp.swift */; };
-		2D6E754D2C82125B0074AA9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E754C2C82125B0074AA9B /* ContentView.swift */; };
 		2D6E754F2C82125F0074AA9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E754E2C82125F0074AA9B /* Assets.xcassets */; };
 		2D6E75522C82125F0074AA9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E75512C82125F0074AA9B /* Preview Assets.xcassets */; };
-		2D6E75542C82125F0074AA9B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E75532C82125F0074AA9B /* Persistence.swift */; };
 		2D6E75572C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E75552C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld */; };
 		2D6E75612C8212600074AA9B /* SwiftLearningNovelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E75602C8212600074AA9B /* SwiftLearningNovelAppTests.swift */; };
 		2D6E756B2C8212600074AA9B /* SwiftLearningNovelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E756A2C8212600074AA9B /* SwiftLearningNovelAppUITests.swift */; };
 		2D6E756D2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E756C2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift */; };
+		2D6E757C2C845D3A0074AA9B /* NovelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E757B2C845D3A0074AA9B /* NovelApp.swift */; };
+		2D6E75822C8465C80074AA9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E75812C8465C80074AA9B /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,17 +36,16 @@
 
 /* Begin PBXFileReference section */
 		2D6E75472C82125B0074AA9B /* SwiftLearningNovelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLearningNovelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D6E754A2C82125B0074AA9B /* SwiftLearningNovelAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningNovelAppApp.swift; sourceTree = "<group>"; };
-		2D6E754C2C82125B0074AA9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D6E754E2C82125F0074AA9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D6E75512C82125F0074AA9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2D6E75532C82125F0074AA9B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2D6E75562C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftLearningNovelApp.xcdatamodel; sourceTree = "<group>"; };
 		2D6E755C2C8212600074AA9B /* SwiftLearningNovelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningNovelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6E75602C8212600074AA9B /* SwiftLearningNovelAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningNovelAppTests.swift; sourceTree = "<group>"; };
 		2D6E75662C8212600074AA9B /* SwiftLearningNovelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningNovelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6E756A2C8212600074AA9B /* SwiftLearningNovelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningNovelAppUITests.swift; sourceTree = "<group>"; };
 		2D6E756C2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningNovelAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2D6E757B2C845D3A0074AA9B /* NovelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelApp.swift; sourceTree = "<group>"; };
+		2D6E75812C8465C80074AA9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +96,13 @@
 		2D6E75492C82125B0074AA9B /* SwiftLearningNovelApp */ = {
 			isa = PBXGroup;
 			children = (
-				2D6E754A2C82125B0074AA9B /* SwiftLearningNovelAppApp.swift */,
-				2D6E754C2C82125B0074AA9B /* ContentView.swift */,
+				2D792E352C8474EF005E26A1 /* Models */,
+				2D792E342C8474C0005E26A1 /* Routers */,
+				2D792E332C8474AD005E26A1 /* Presenters */,
+				2D792E322C84747F005E26A1 /* Interactors */,
+				2D6E757A2C845BA70074AA9B /* App */,
+				2D6E75792C8457F90074AA9B /* View */,
 				2D6E754E2C82125F0074AA9B /* Assets.xcassets */,
-				2D6E75532C82125F0074AA9B /* Persistence.swift */,
 				2D6E75552C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld */,
 				2D6E75502C82125F0074AA9B /* Preview Content */,
 			);
@@ -131,6 +132,58 @@
 				2D6E756C2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift */,
 			);
 			path = SwiftLearningNovelAppUITests;
+			sourceTree = "<group>";
+		};
+		2D6E75792C8457F90074AA9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D792E362C84752A005E26A1 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D6E757A2C845BA70074AA9B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E757B2C845D3A0074AA9B /* NovelApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2D792E322C84747F005E26A1 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		2D792E332C8474AD005E26A1 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		2D792E342C8474C0005E26A1 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		2D792E352C8474EF005E26A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D792E362C84752A005E26A1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E75812C8465C80074AA9B /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6E757C2C845D3A0074AA9B /* NovelApp.swift in Sources */,
 				2D6E75572C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld in Sources */,
-				2D6E75542C82125F0074AA9B /* Persistence.swift in Sources */,
-				2D6E754D2C82125B0074AA9B /* ContentView.swift in Sources */,
-				2D6E754B2C82125B0074AA9B /* SwiftLearningNovelAppApp.swift in Sources */,
+				2D6E75822C8465C80074AA9B /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
