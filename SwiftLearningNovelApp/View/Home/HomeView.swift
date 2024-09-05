@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var appState: AppState
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("小説リレー")
+            ZStack{
+                if appState.isLogin {
+                    UserPageView()
+                }else{
+                Text("ログイン").onTapGesture {
+                    print("タップされたよ");
+                }
+               }
+            }
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environmentObject(AppState())
     }
 }
 

@@ -15,6 +15,9 @@
 		2D6E756D2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E756C2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift */; };
 		2D6E757C2C845D3A0074AA9B /* NovelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E757B2C845D3A0074AA9B /* NovelApp.swift */; };
 		2D6E75822C8465C80074AA9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E75812C8465C80074AA9B /* HomeView.swift */; };
+		2D88BA5D2C8878960083563A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA5C2C8878960083563A /* LoginView.swift */; };
+		2D88BA602C887D850083563A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA5F2C887D850083563A /* AppState.swift */; };
+		2D88BA622C8880690083563A /* UserPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA612C8880690083563A /* UserPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		2D6E756C2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningNovelAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2D6E757B2C845D3A0074AA9B /* NovelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelApp.swift; sourceTree = "<group>"; };
 		2D6E75812C8465C80074AA9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2D88BA5C2C8878960083563A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2D88BA5F2C887D850083563A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2D88BA612C8880690083563A /* UserPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,7 @@
 		2D6E75492C82125B0074AA9B /* SwiftLearningNovelApp */ = {
 			isa = PBXGroup;
 			children = (
-				2D792E352C8474EF005E26A1 /* Models */,
+				2D88BA5E2C887D4E0083563A /* Entities */,
 				2D792E342C8474C0005E26A1 /* Routers */,
 				2D792E332C8474AD005E26A1 /* Presenters */,
 				2D792E322C84747F005E26A1 /* Interactors */,
@@ -171,19 +177,22 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
-		2D792E352C8474EF005E26A1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		2D792E362C84752A005E26A1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				2D6E75812C8465C80074AA9B /* HomeView.swift */,
+				2D88BA5C2C8878960083563A /* LoginView.swift */,
+				2D88BA612C8880690083563A /* UserPageView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		2D88BA5E2C887D4E0083563A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2D88BA5F2C887D850083563A /* AppState.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D6E757C2C845D3A0074AA9B /* NovelApp.swift in Sources */,
+				2D88BA602C887D850083563A /* AppState.swift in Sources */,
 				2D6E75572C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld in Sources */,
+				2D88BA5D2C8878960083563A /* LoginView.swift in Sources */,
+				2D88BA622C8880690083563A /* UserPageView.swift in Sources */,
 				2D6E75822C8465C80074AA9B /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
