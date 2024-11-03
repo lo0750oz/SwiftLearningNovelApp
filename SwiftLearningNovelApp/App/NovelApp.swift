@@ -13,8 +13,15 @@ struct SwiftLearningNovelAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environmentObject(appState)
+            if let currentView = appState.currentView {
+                currentView // currentViewがnilでない場合に表示
+            } else {
+                // 初期表示はHomeView
+                let router = HomeRouter()
+                let presenter = HomePresenter(router: router, appState: appState)
+                HomeView(presenter: presenter)
+                    .environmentObject(appState)
+            }
         }
     }
 }

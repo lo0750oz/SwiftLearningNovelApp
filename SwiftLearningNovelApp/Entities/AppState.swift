@@ -6,7 +6,9 @@
 //
 
 import Combine
+import SwiftUI
 
 final class AppState: ObservableObject {
     @Published var isLogin = false
+    @Published var currentView: AnyView? = nil
 }

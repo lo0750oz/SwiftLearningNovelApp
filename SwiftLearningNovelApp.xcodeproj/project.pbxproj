@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D279CCA2C9E6D9300B6D783 /* UserRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D279CC92C9E6D9300B6D783 /* UserRegisterView.swift */; };
 		2D6E754F2C82125F0074AA9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E754E2C82125F0074AA9B /* Assets.xcassets */; };
 		2D6E75522C82125F0074AA9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E75512C82125F0074AA9B /* Preview Assets.xcassets */; };
 		2D6E75572C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E75552C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld */; };
@@ -18,6 +19,8 @@
 		2D88BA5D2C8878960083563A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA5C2C8878960083563A /* LoginView.swift */; };
 		2D88BA602C887D850083563A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA5F2C887D850083563A /* AppState.swift */; };
 		2D88BA622C8880690083563A /* UserPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA612C8880690083563A /* UserPageView.swift */; };
+		2D9DEE4D2C982D3600BE96B4 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DEE4C2C982D3600BE96B4 /* HomePresenter.swift */; };
+		2D9DEE502C982FD100BE96B4 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DEE4F2C982FD100BE96B4 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D279CC92C9E6D9300B6D783 /* UserRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterView.swift; sourceTree = "<group>"; };
 		2D6E75472C82125B0074AA9B /* SwiftLearningNovelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLearningNovelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6E754E2C82125F0074AA9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D6E75512C82125F0074AA9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		2D88BA5C2C8878960083563A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2D88BA5F2C887D850083563A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2D88BA612C8880690083563A /* UserPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageView.swift; sourceTree = "<group>"; };
+		2D9DEE4C2C982D3600BE96B4 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		2D9DEE4F2C982FD100BE96B4 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +149,10 @@
 		2D6E75792C8457F90074AA9B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2DDC20D72C9E6C5900C825D2 /* UserRegister */,
 				2D792E362C84752A005E26A1 /* Home */,
+				2D9DEE492C9829F300BE96B4 /* Login */,
+				2D9DEE4A2C982A0D00BE96B4 /* UserPage */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +175,7 @@
 		2D792E332C8474AD005E26A1 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				2D9DEE4B2C982D1000BE96B4 /* Home */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -173,6 +183,7 @@
 		2D792E342C8474C0005E26A1 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				2D9DEE4E2C982F9B00BE96B4 /* Home */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -181,8 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				2D6E75812C8465C80074AA9B /* HomeView.swift */,
-				2D88BA5C2C8878960083563A /* LoginView.swift */,
-				2D88BA612C8880690083563A /* UserPageView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -193,6 +202,46 @@
 				2D88BA5F2C887D850083563A /* AppState.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		2D9DEE492C9829F300BE96B4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2D88BA5C2C8878960083563A /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2D9DEE4A2C982A0D00BE96B4 /* UserPage */ = {
+			isa = PBXGroup;
+			children = (
+				2D88BA612C8880690083563A /* UserPageView.swift */,
+			);
+			path = UserPage;
+			sourceTree = "<group>";
+		};
+		2D9DEE4B2C982D1000BE96B4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2D9DEE4C2C982D3600BE96B4 /* HomePresenter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2D9DEE4E2C982F9B00BE96B4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2D9DEE4F2C982FD100BE96B4 /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DDC20D72C9E6C5900C825D2 /* UserRegister */ = {
+			isa = PBXGroup;
+			children = (
+				2D279CC92C9E6D9300B6D783 /* UserRegisterView.swift */,
+			);
+			path = UserRegister;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,10 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9DEE4D2C982D3600BE96B4 /* HomePresenter.swift in Sources */,
 				2D6E757C2C845D3A0074AA9B /* NovelApp.swift in Sources */,
 				2D88BA602C887D850083563A /* AppState.swift in Sources */,
 				2D6E75572C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld in Sources */,
 				2D88BA5D2C8878960083563A /* LoginView.swift in Sources */,
+				2D9DEE502C982FD100BE96B4 /* HomeRouter.swift in Sources */,
+				2D279CCA2C9E6D9300B6D783 /* UserRegisterView.swift in Sources */,
 				2D88BA622C8880690083563A /* UserPageView.swift in Sources */,
 				2D6E75822C8465C80074AA9B /* HomeView.swift in Sources */,
 			);
