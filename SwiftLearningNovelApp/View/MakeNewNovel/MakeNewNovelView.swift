@@ -1,49 +1,46 @@
 //
-//  LoginView.swift
+//  MakeNewNovelView.swift
 //  SwiftLearningNovelApp
 //
-//  Created by 寺田栞理 on 2024/09/04.
+//  Created by 寺田栞理 on 2025/01/02.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct MakeNewNovelView: View {
     @EnvironmentObject var appState: AppState
-    @AppStorage("login") var login = false
-    var presenter: LoginPresenterProtocol
-    @State var inputId = ""
-    @State var inputPasswd = ""
+    @State var novelTitle = ""
+    @State var memberId = ""
     var body: some View {
         ZStack{
-            Color(red:251/255,green:250/255,blue:218/255).ignoresSafeArea()
+            Color.mainCream.ignoresSafeArea()
             
 
             VStack(spacing: 25){
-                TextField("ユーザーID", text: $inputId)
+                TextField("タイトル", text: $novelTitle)
                     .padding()
                     .frame(width: 220, height: 50)
-                    .foregroundColor(Color(red:18/255,green:55/255,blue:42/255))
+                    .foregroundColor(Color.deeepGreen)
                     .overlay(
                         RoundedRectangle(cornerRadius: 25)
-                            .stroke(Color(red:18/255,green:55/255,blue:42/255), lineWidth: 1)
+                            .stroke(Color.deeepGreen, lineWidth: 1)
                     )
-                SecureField("パスワード", text: $inputPasswd)
+                TextField("メンバーID", text: $memberId)
                     .padding()
                     .frame(width: 220, height: 50)
-                    .foregroundColor(Color(red:18/255,green:55/255,blue:42/255))
+                    .foregroundColor(Color.deeepGreen)
                     .overlay(
                         RoundedRectangle(cornerRadius: 25)
-                            .stroke(Color(red:18/255,green:55/255,blue:42/255), lineWidth: 1)
+                            .stroke(Color.deeepGreen, lineWidth: 1)
                     )
                 Button(action: {
-                    print("ログインタップされたよ")
-                    presenter.login(userId: inputId, password: inputPasswd)
+                    print("新規作成タップされたよ")
                 }){
-                    Text("ログイン")
+                    Text("新規作成")
                         .padding()
                         .frame(width: 120, height: 50)
-                        .background(Color(red:18/255,green:55/255,blue:42/255))
-                        .foregroundColor(Color(red:251/255,green:250/255,blue:218/255))
+                        .background(Color.deeepGreen)
+                        .foregroundColor(Color.mainCream)
                         .cornerRadius(.infinity)
                 }
             }
@@ -51,12 +48,12 @@ struct LoginView: View {
             VStack{
                 HStack {
                     Button(action: {
-                        print("戻るボタンが押されました")
-                        presenter.didTapPageBackButton()
+                        print("閉じるボタンが押されました")
+                        appState.navigationPath.removeLast()
                     }){
                         HStack {
-                            Image(systemName: "chevron.backward")
-                            Text("Home")
+                            Image(systemName: "xmark.circle.fill")
+                            Text("閉じる")
                         }
                         .foregroundColor(.black)
                     }
@@ -65,7 +62,7 @@ struct LoginView: View {
                     Spacer()
                     
                     VStack{
-                        Text("ログイン")
+                        Text("小説新規作成")
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity, alignment: .center)
                     }
@@ -84,16 +81,10 @@ struct LoginView: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
         }
+        .navigationBarHidden(true)
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        let appState = AppState()
-        let router = LoginRouter()
-        let apiClient = APIClient()
-        let interactor = LoginInteractor(apiClient: apiClient)
-        let presenter = LoginPresenter(router: router, appState: appState, loginInteractor: interactor)
-        LoginView(presenter: presenter).environmentObject(appState)
-    }
+#Preview {
+    MakeNewNovelView()
 }
