@@ -35,6 +35,7 @@ struct SideMenuView: View {
                         Button(action: {
                             appState.isLogin = false
                             userDefaultsManager.removeUser()
+                            appState.removeNovelData()
                             print("ログアウト")
                         }) {
                             HStack {

@@ -20,7 +20,7 @@ struct HomeRouter: HomeRouterProtocol {
     func navigateToLoginView(appState: AppState) {
         print("Router: ログイン画面に遷移")
         // LoginInteractorを作成
-        let loginInteractor = LoginInteractor(apiClient: apiClient)
+        let loginInteractor = LoginInteractor(apiClient: apiClient, appState: appState)
         // 遷移先にappStateを渡してログイン画面へ遷移
         let loginPresenter = LoginPresenter(router: LoginRouter(), appState: appState, loginInteractor: loginInteractor)
         let loginView = LoginView(presenter: loginPresenter).environmentObject(appState)
@@ -39,8 +39,15 @@ struct HomeRouter: HomeRouterProtocol {
     func navigateToUserPageView(appState: AppState) {
         print("Router: マイページに遷移")
         // 遷移先にappStateを渡してマイページへ遷移
-        let userPagePresenter = UserPagePresenter(router: UserPageRouter(), appState: appState)
-        let userPageView = UserPageView(presenter: userPagePresenter).environmentObject(appState)
+        let userPagePresenter = UserPagePresenter(router: UserPageRouter(), appState: appState, interactor: UserPageInteractor(appState: appState, apiClient: apiClient))
+        let router = MakeNewNovelRouter()
+        let loginInteractor = LoginInteractor(apiClient: apiClient, appState: appState)
+        let interactor = MakeNewNovelInteractor(apiClient: apiClient, appState: appState, loginInteractor: loginInteractor)
+        let makeNewNovelPresenter = MakeNewNovelPresenter(interactor: interactor, loginInteractor: loginInteractor, router: router, appState: appState)
+        let AddNewNovelTextRouter = AddNewNovelTextRouter()
+        let AddNewNovelTextInteractor = AddNewNovelTextInteractor(apiClient: apiClient, appState: appState)
+        let AddNewNovelTextPresenter = AddNewNovelTextPresenter(interactor: AddNewNovelTextInteractor, router: AddNewNovelTextRouter, appState: appState)
+        let userPageView = UserPageView(presenter: userPagePresenter, makeNewNovelPresenter: makeNewNovelPresenter, AddNewNovelTextPresenter: AddNewNovelTextPresenter).environmentObject(appState)
         appState.currentView = AnyView(userPageView) // currentViewを更新
     }
 }

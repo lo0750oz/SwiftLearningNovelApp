@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol UserPageRouterProtocol {
     func navigateToMakeNewNovelView(appState: AppState)
+    func navigateToNovelPageView (appState: AppState)
 }
 
 struct UserPageRouter: UserPageRouterProtocol {
@@ -18,5 +19,10 @@ struct UserPageRouter: UserPageRouterProtocol {
 //        let makeNewNovelView = MakeNewNovelView().environmentObject(appState)
 //        appState.currentView = AnyView(makeNewNovelView)
         appState.navigationPath.append("MakeNewNovelView")
+    }
+    
+    func navigateToNovelPageView (appState: AppState) {
+        print("Router: 小説ページに遷移")
+        appState.navigationPath.append("NovelPageView")
     }
 }

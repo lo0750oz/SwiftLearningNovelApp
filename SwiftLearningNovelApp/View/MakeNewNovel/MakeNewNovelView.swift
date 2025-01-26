@@ -9,13 +9,13 @@ import SwiftUI
 
 struct MakeNewNovelView: View {
     @EnvironmentObject var appState: AppState
+    var presenter: MakeNewNovelPresenterProtocol
     @State var novelTitle = ""
     @State var memberId = ""
     var body: some View {
         ZStack{
             Color.mainCream.ignoresSafeArea()
             
-
             VStack(spacing: 25){
                 TextField("タイトル", text: $novelTitle)
                     .padding()
@@ -35,6 +35,7 @@ struct MakeNewNovelView: View {
                     )
                 Button(action: {
                     print("新規作成タップされたよ")
+                    presenter.didTapAddNewNovelButton(title: novelTitle, id: memberId)
                 }){
                     Text("新規作成")
                         .padding()
@@ -44,6 +45,7 @@ struct MakeNewNovelView: View {
                         .cornerRadius(.infinity)
                 }
             }
+            
             // ヘッダー部分を overlay で配置
             VStack{
                 HStack {
@@ -75,7 +77,7 @@ struct MakeNewNovelView: View {
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(Color(red: 67/255, green: 104/255, blue: 80/255).opacity(0.7))
+                .background(Color.middeleGreen)
                 .frame(height: 40) // ヘッダーの高さを調整
                 Spacer()
             }
@@ -85,6 +87,15 @@ struct MakeNewNovelView: View {
     }
 }
 
-#Preview {
-    MakeNewNovelView()
+
+struct MakeNewNovelView_Previews: PreviewProvider {
+    static var previews: some View {
+        let appState = AppState()
+        let apiClient = APIClient()
+        let router = MakeNewNovelRouter()
+        let loginInteractor = LoginInteractor(apiClient: apiClient, appState: appState)
+        let interactor = MakeNewNovelInteractor(apiClient: apiClient, appState: appState, loginInteractor: loginInteractor)
+        let presenter = MakeNewNovelPresenter(interactor: interactor, loginInteractor: loginInteractor, router: router, appState: appState)
+        MakeNewNovelView(presenter: presenter).environmentObject(appState)
+    }
 }

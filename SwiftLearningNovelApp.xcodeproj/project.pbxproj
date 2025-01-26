@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D279CCA2C9E6D9300B6D783 /* UserRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D279CC92C9E6D9300B6D783 /* UserRegisterView.swift */; };
+		2D6468DC2D37FF6F00D4D1F9 /* PatchNovelSpaceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6468DB2D37FF6F00D4D1F9 /* PatchNovelSpaceRequest.swift */; };
 		2D6E754F2C82125F0074AA9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E754E2C82125F0074AA9B /* Assets.xcassets */; };
 		2D6E75522C82125F0074AA9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E75512C82125F0074AA9B /* Preview Assets.xcassets */; };
 		2D6E75572C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E75552C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld */; };
@@ -19,6 +20,15 @@
 		2D88BA5D2C8878960083563A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA5C2C8878960083563A /* LoginView.swift */; };
 		2D88BA602C887D850083563A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA5F2C887D850083563A /* AppState.swift */; };
 		2D88BA622C8880690083563A /* UserPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA612C8880690083563A /* UserPageView.swift */; };
+		2D95EA582D34013300A2B928 /* GetNovelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95EA572D34013300A2B928 /* GetNovelRequest.swift */; };
+		2D95EA5A2D34017600A2B928 /* NovelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95EA592D34017600A2B928 /* NovelData.swift */; };
+		2D95EA5C2D34F05700A2B928 /* NovelSpaceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95EA5B2D34F05700A2B928 /* NovelSpaceButtonView.swift */; };
+		2D95EA5F2D35088B00A2B928 /* NovelPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95EA5E2D35088B00A2B928 /* NovelPageView.swift */; };
+		2D95EA612D35109400A2B928 /* UserPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95EA602D35109400A2B928 /* UserPageInteractor.swift */; };
+		2D95EA642D351D1200A2B928 /* PostNewNovelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95EA632D351D1200A2B928 /* PostNewNovelRequest.swift */; };
+		2D95EA672D3555A700A2B928 /* MakeNewNovelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95EA662D3555A700A2B928 /* MakeNewNovelPresenter.swift */; };
+		2D95EA6A2D35560F00A2B928 /* MakeNewNovelInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D95EA692D35560F00A2B928 /* MakeNewNovelInteractor.swift */; };
+		2D9962222D367E9F006F4B0A /* MakeNewNovelRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9962212D367E9F006F4B0A /* MakeNewNovelRouter.swift */; };
 		2D9BEBF92D267FBF00FD4BEA /* MakeNewNovelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9BEBF82D267FBF00FD4BEA /* MakeNewNovelView.swift */; };
 		2D9BEBFC2D27C15B00FD4BEA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9BEBFB2D27C15B00FD4BEA /* UserData.swift */; };
 		2D9BEBFE2D27EACF00FD4BEA /* GetUserDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9BEBFD2D27EACF00FD4BEA /* GetUserDataRequest.swift */; };
@@ -38,6 +48,13 @@
 		2DA03D942D23D7DB0094962E /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA03D932D23D7DB0094962E /* ColorExtention.swift */; };
 		2DA03D982D23E9F40094962E /* UserPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA03D972D23E9F40094962E /* UserPagePresenter.swift */; };
 		2DA03D9A2D23EA110094962E /* UserPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA03D992D23EA110094962E /* UserPageRouter.swift */; };
+		2DC85B6A2D44B9990044A1B5 /* NovelTextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85B692D44B9990044A1B5 /* NovelTextData.swift */; };
+		2DC85B6C2D44BA860044A1B5 /* GetNovelTextsDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85B6B2D44BA860044A1B5 /* GetNovelTextsDataRequest.swift */; };
+		2DC85B6F2D4505A80044A1B5 /* AddNewNovelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85B6E2D4505A80044A1B5 /* AddNewNovelTextView.swift */; };
+		2DC85B722D4520B80044A1B5 /* AddNewNovelTextPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85B712D4520B80044A1B5 /* AddNewNovelTextPresenter.swift */; };
+		2DC85B752D4524070044A1B5 /* AddNewNovelTextInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85B742D4524070044A1B5 /* AddNewNovelTextInteractor.swift */; };
+		2DC85B772D4524550044A1B5 /* PostNewNovelTextRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85B762D4524550044A1B5 /* PostNewNovelTextRequest.swift */; };
+		2DC85B7A2D4604030044A1B5 /* AddNewNovelTextRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85B792D4604030044A1B5 /* AddNewNovelTextRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		2D279CC92C9E6D9300B6D783 /* UserRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterView.swift; sourceTree = "<group>"; };
+		2D6468DB2D37FF6F00D4D1F9 /* PatchNovelSpaceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNovelSpaceRequest.swift; sourceTree = "<group>"; };
 		2D6E75472C82125B0074AA9B /* SwiftLearningNovelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLearningNovelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6E754E2C82125F0074AA9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D6E75512C82125F0074AA9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -73,6 +91,15 @@
 		2D88BA5C2C8878960083563A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2D88BA5F2C887D850083563A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2D88BA612C8880690083563A /* UserPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageView.swift; sourceTree = "<group>"; };
+		2D95EA572D34013300A2B928 /* GetNovelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNovelRequest.swift; sourceTree = "<group>"; };
+		2D95EA592D34017600A2B928 /* NovelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelData.swift; sourceTree = "<group>"; };
+		2D95EA5B2D34F05700A2B928 /* NovelSpaceButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelSpaceButtonView.swift; sourceTree = "<group>"; };
+		2D95EA5E2D35088B00A2B928 /* NovelPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelPageView.swift; sourceTree = "<group>"; };
+		2D95EA602D35109400A2B928 /* UserPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageInteractor.swift; sourceTree = "<group>"; };
+		2D95EA632D351D1200A2B928 /* PostNewNovelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewNovelRequest.swift; sourceTree = "<group>"; };
+		2D95EA662D3555A700A2B928 /* MakeNewNovelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewNovelPresenter.swift; sourceTree = "<group>"; };
+		2D95EA692D35560F00A2B928 /* MakeNewNovelInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewNovelInteractor.swift; sourceTree = "<group>"; };
+		2D9962212D367E9F006F4B0A /* MakeNewNovelRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewNovelRouter.swift; sourceTree = "<group>"; };
 		2D9BEBF82D267FBF00FD4BEA /* MakeNewNovelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNewNovelView.swift; sourceTree = "<group>"; };
 		2D9BEBFB2D27C15B00FD4BEA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		2D9BEBFD2D27EACF00FD4BEA /* GetUserDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataRequest.swift; sourceTree = "<group>"; };
@@ -91,6 +118,13 @@
 		2DA03D932D23D7DB0094962E /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		2DA03D972D23E9F40094962E /* UserPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPagePresenter.swift; sourceTree = "<group>"; };
 		2DA03D992D23EA110094962E /* UserPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageRouter.swift; sourceTree = "<group>"; };
+		2DC85B692D44B9990044A1B5 /* NovelTextData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelTextData.swift; sourceTree = "<group>"; };
+		2DC85B6B2D44BA860044A1B5 /* GetNovelTextsDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNovelTextsDataRequest.swift; sourceTree = "<group>"; };
+		2DC85B6E2D4505A80044A1B5 /* AddNewNovelTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNovelTextView.swift; sourceTree = "<group>"; };
+		2DC85B712D4520B80044A1B5 /* AddNewNovelTextPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNovelTextPresenter.swift; sourceTree = "<group>"; };
+		2DC85B742D4524070044A1B5 /* AddNewNovelTextInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNovelTextInteractor.swift; sourceTree = "<group>"; };
+		2DC85B762D4524550044A1B5 /* PostNewNovelTextRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewNovelTextRequest.swift; sourceTree = "<group>"; };
+		2DC85B792D4604030044A1B5 /* AddNewNovelTextRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNovelTextRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +223,8 @@
 				2D9DEE492C9829F300BE96B4 /* Login */,
 				2D9DEE4A2C982A0D00BE96B4 /* UserPage */,
 				2D9BEBF72D267F4700FD4BEA /* MakeNewNovel */,
+				2D95EA5D2D35085800A2B928 /* NovelPage */,
+				2DC85B6D2D45052B0044A1B5 /* AddNewNovelText */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +242,9 @@
 			children = (
 				2D9BEC0B2D328C0600FD4BEA /* UserRegister */,
 				2D9BEC0A2D328BF100FD4BEA /* Login */,
+				2D95EA622D35109D00A2B928 /* UserPage */,
+				2D95EA682D3555D600A2B928 /* MakeNewNovel */,
+				2DC85B732D4523B20044A1B5 /* AddNewNovelText */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -217,6 +256,8 @@
 				2D9CEE212CD7632600B1C963 /* Login */,
 				2D9DEE4B2C982D1000BE96B4 /* Home */,
 				2DA03D962D23E94B0094962E /* UserPage */,
+				2D95EA652D35556D00A2B928 /* MakeNewNovel */,
+				2DC85B702D45207A0044A1B5 /* AddNewNovelText */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -228,6 +269,8 @@
 				2D9CEE202CD7631B00B1C963 /* Login */,
 				2D9DEE4E2C982F9B00BE96B4 /* Home */,
 				2DA03D952D23E9340094962E /* UserPage */,
+				2D9962202D367E72006F4B0A /* MakeNewNovel */,
+				2DC85B782D4603C80044A1B5 /* AddNewNovelText */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -243,11 +286,53 @@
 		2D88BA5E2C887D4E0083563A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				2D88BA5F2C887D850083563A /* AppState.swift */,
 				2D9BEBFB2D27C15B00FD4BEA /* UserData.swift */,
+				2D95EA592D34017600A2B928 /* NovelData.swift */,
+				2DC85B692D44B9990044A1B5 /* NovelTextData.swift */,
+				2D88BA5F2C887D850083563A /* AppState.swift */,
 				2D9BEC0E2D32A63A00FD4BEA /* UserDafaultsManager.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		2D95EA5D2D35085800A2B928 /* NovelPage */ = {
+			isa = PBXGroup;
+			children = (
+				2D95EA5E2D35088B00A2B928 /* NovelPageView.swift */,
+			);
+			path = NovelPage;
+			sourceTree = "<group>";
+		};
+		2D95EA622D35109D00A2B928 /* UserPage */ = {
+			isa = PBXGroup;
+			children = (
+				2D95EA602D35109400A2B928 /* UserPageInteractor.swift */,
+			);
+			path = UserPage;
+			sourceTree = "<group>";
+		};
+		2D95EA652D35556D00A2B928 /* MakeNewNovel */ = {
+			isa = PBXGroup;
+			children = (
+				2D95EA662D3555A700A2B928 /* MakeNewNovelPresenter.swift */,
+			);
+			path = MakeNewNovel;
+			sourceTree = "<group>";
+		};
+		2D95EA682D3555D600A2B928 /* MakeNewNovel */ = {
+			isa = PBXGroup;
+			children = (
+				2D95EA692D35560F00A2B928 /* MakeNewNovelInteractor.swift */,
+			);
+			path = MakeNewNovel;
+			sourceTree = "<group>";
+		};
+		2D9962202D367E72006F4B0A /* MakeNewNovel */ = {
+			isa = PBXGroup;
+			children = (
+				2D9962212D367E9F006F4B0A /* MakeNewNovelRouter.swift */,
+			);
+			path = MakeNewNovel;
 			sourceTree = "<group>";
 		};
 		2D9BEBF72D267F4700FD4BEA /* MakeNewNovel */ = {
@@ -263,6 +348,11 @@
 			children = (
 				2D9BEBFD2D27EACF00FD4BEA /* GetUserDataRequest.swift */,
 				2D9BEC082D2ACE3700FD4BEA /* PostNewUserDataRequest.swift */,
+				2D95EA572D34013300A2B928 /* GetNovelRequest.swift */,
+				2D95EA632D351D1200A2B928 /* PostNewNovelRequest.swift */,
+				2D6468DB2D37FF6F00D4D1F9 /* PatchNovelSpaceRequest.swift */,
+				2DC85B6B2D44BA860044A1B5 /* GetNovelTextsDataRequest.swift */,
+				2DC85B762D4524550044A1B5 /* PostNewNovelTextRequest.swift */,
 				2D9BEC032D2A617C00FD4BEA /* APIClient.swift */,
 			);
 			path = API;
@@ -313,6 +403,7 @@
 			children = (
 				2D88BA612C8880690083563A /* UserPageView.swift */,
 				2D9CEE262D057C3200B1C963 /* SideMenuView.swift */,
+				2D95EA5B2D34F05700A2B928 /* NovelSpaceButtonView.swift */,
 			);
 			path = UserPage;
 			sourceTree = "<group>";
@@ -372,6 +463,38 @@
 				2DA03D972D23E9F40094962E /* UserPagePresenter.swift */,
 			);
 			path = UserPage;
+			sourceTree = "<group>";
+		};
+		2DC85B6D2D45052B0044A1B5 /* AddNewNovelText */ = {
+			isa = PBXGroup;
+			children = (
+				2DC85B6E2D4505A80044A1B5 /* AddNewNovelTextView.swift */,
+			);
+			path = AddNewNovelText;
+			sourceTree = "<group>";
+		};
+		2DC85B702D45207A0044A1B5 /* AddNewNovelText */ = {
+			isa = PBXGroup;
+			children = (
+				2DC85B712D4520B80044A1B5 /* AddNewNovelTextPresenter.swift */,
+			);
+			path = AddNewNovelText;
+			sourceTree = "<group>";
+		};
+		2DC85B732D4523B20044A1B5 /* AddNewNovelText */ = {
+			isa = PBXGroup;
+			children = (
+				2DC85B742D4524070044A1B5 /* AddNewNovelTextInteractor.swift */,
+			);
+			path = AddNewNovelText;
+			sourceTree = "<group>";
+		};
+		2DC85B782D4603C80044A1B5 /* AddNewNovelText */ = {
+			isa = PBXGroup;
+			children = (
+				2DC85B792D4604030044A1B5 /* AddNewNovelTextRouter.swift */,
+			);
+			path = AddNewNovelText;
 			sourceTree = "<group>";
 		};
 		2DDC20D72C9E6C5900C825D2 /* UserRegister */ = {
@@ -519,28 +642,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9DEE4D2C982D3600BE96B4 /* HomePresenter.swift in Sources */,
+				2DC85B722D4520B80044A1B5 /* AddNewNovelTextPresenter.swift in Sources */,
+				2D95EA5F2D35088B00A2B928 /* NovelPageView.swift in Sources */,
 				2D9BEC042D2A617C00FD4BEA /* APIClient.swift in Sources */,
 				2D6E757C2C845D3A0074AA9B /* NovelApp.swift in Sources */,
 				2DA03D912D1FD2500094962E /* UserRegisterPresenter.swift in Sources */,
 				2D9BEBFC2D27C15B00FD4BEA /* UserData.swift in Sources */,
 				2D88BA602C887D850083563A /* AppState.swift in Sources */,
+				2D6468DC2D37FF6F00D4D1F9 /* PatchNovelSpaceRequest.swift in Sources */,
 				2DA03D8F2D1FD2300094962E /* UserRegisterRouter.swift in Sources */,
+				2D95EA612D35109400A2B928 /* UserPageInteractor.swift in Sources */,
 				2D6E75572C82125F0074AA9B /* SwiftLearningNovelApp.xcdatamodeld in Sources */,
+				2D9962222D367E9F006F4B0A /* MakeNewNovelRouter.swift in Sources */,
+				2D95EA5A2D34017600A2B928 /* NovelData.swift in Sources */,
 				2DA03D982D23E9F40094962E /* UserPagePresenter.swift in Sources */,
 				2D9CEE252CD7638600B1C963 /* LoginPresenter.swift in Sources */,
 				2D88BA5D2C8878960083563A /* LoginView.swift in Sources */,
+				2D95EA582D34013300A2B928 /* GetNovelRequest.swift in Sources */,
 				2DA03D942D23D7DB0094962E /* ColorExtention.swift in Sources */,
 				2D9BEC0F2D32A63A00FD4BEA /* UserDafaultsManager.swift in Sources */,
 				2D9BEC072D2A654400FD4BEA /* LoginInteractor.swift in Sources */,
+				2DC85B772D4524550044A1B5 /* PostNewNovelTextRequest.swift in Sources */,
 				2D9CEE272D057C3200B1C963 /* SideMenuView.swift in Sources */,
 				2D9DEE502C982FD100BE96B4 /* HomeRouter.swift in Sources */,
 				2D9BEBFE2D27EACF00FD4BEA /* GetUserDataRequest.swift in Sources */,
+				2DC85B7A2D4604030044A1B5 /* AddNewNovelTextRouter.swift in Sources */,
 				2D279CCA2C9E6D9300B6D783 /* UserRegisterView.swift in Sources */,
 				2D88BA622C8880690083563A /* UserPageView.swift in Sources */,
+				2DC85B6F2D4505A80044A1B5 /* AddNewNovelTextView.swift in Sources */,
+				2DC85B6C2D44BA860044A1B5 /* GetNovelTextsDataRequest.swift in Sources */,
 				2D9BEBF92D267FBF00FD4BEA /* MakeNewNovelView.swift in Sources */,
+				2D95EA642D351D1200A2B928 /* PostNewNovelRequest.swift in Sources */,
 				2D9CEE232CD7636200B1C963 /* LoginRouter.swift in Sources */,
+				2D95EA672D3555A700A2B928 /* MakeNewNovelPresenter.swift in Sources */,
+				2D95EA6A2D35560F00A2B928 /* MakeNewNovelInteractor.swift in Sources */,
+				2DC85B752D4524070044A1B5 /* AddNewNovelTextInteractor.swift in Sources */,
 				2DA03D9A2D23EA110094962E /* UserPageRouter.swift in Sources */,
+				2D95EA5C2D34F05700A2B928 /* NovelSpaceButtonView.swift in Sources */,
 				2D9BEC092D2ACE3700FD4BEA /* PostNewUserDataRequest.swift in Sources */,
+				2DC85B6A2D44B9990044A1B5 /* NovelTextData.swift in Sources */,
 				2D9BEC0D2D328C3300FD4BEA /* UserRegisterInteractor.swift in Sources */,
 				2D6E75822C8465C80074AA9B /* HomeView.swift in Sources */,
 			);

@@ -11,6 +11,8 @@ struct UserPageView: View {
     @EnvironmentObject var appState: AppState
     @State var isOpenSideMenu: Bool = false
     var presenter: UserPagePresenterProtocol
+    let makeNewNovelPresenter: MakeNewNovelPresenterProtocol
+    let AddNewNovelTextPresenter: AddNewNovelTextPresenterProtocol
     @State private var user: UserData? = nil
     private let userDefaultsManager = UserDefaultsManager()
     
@@ -18,8 +20,6 @@ struct UserPageView: View {
         NavigationStack(path: $appState.navigationPath) {
             ZStack(alignment: .bottomTrailing) {
                 Color(red:251/255,green:250/255,blue:218/255).ignoresSafeArea()
-                
-                Text("ユーザー情報: \(user)")
                 
                 // ヘッダー部分を overlay で配置
                 VStack{
@@ -55,9 +55,19 @@ struct UserPageView: View {
                     }
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color(red: 67/255, green: 104/255, blue: 80/255).opacity(0.7))
+                    .background(Color.middeleGreen)
                     .frame(height: 40) // ヘッダーの高さを調整
-                    Spacer()
+                    
+                    ScrollView {
+                        VStack{
+                            VStack {
+                                // novelData の数だけ NovelSpaceButtonView を表示
+                                ForEach(appState.novelData) { novel in
+                                    NovelSpaceButtonView(novelData: novel, presenter: presenter )
+                                }
+                            }
+                        }
+                    }
                     
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
@@ -67,23 +77,30 @@ struct UserPageView: View {
                     .environmentObject(appState)
                     .zIndex(1) // サイドメニューを前面に表示
                 
-                // 円形ボタン
-                Button(action: {
-                    print("円形ボタンが押されました")
-                    presenter.didTapAddNovelButton()
-                }) {
-                    Image(systemName: "plus")
-                        .foregroundColor(Color.mainCream)
-                        .frame(width: 70, height: 70)
-                        .background(Color.deeepGreen)
-                        .clipShape(Circle())
-                        .shadow(radius: 4)
+                ZStack{
+                    // 円形ボタン
+                    Button(action: {
+                        print("円形ボタンが押されました")
+                        presenter.didTapAddNovelButton()
+                    }) {
+                        Image(systemName: "plus")
+                            .foregroundColor(Color.mainCream)
+                            .frame(width: 70, height: 70)
+                            .background(Color.deeepGreen)
+                            .clipShape(Circle())
+                            .shadow(radius: 4)
+                    }
+                    .padding()
+                    .zIndex(2)
                 }
-                .padding()
-            }
-            .navigationDestination(for: String.self) { destination in
-                if destination == "MakeNewNovelView" {
-                    MakeNewNovelView()
+                .navigationDestination(for: String.self) { destination in
+                    if destination == "MakeNewNovelView" {
+                        MakeNewNovelView(presenter: makeNewNovelPresenter)
+                    } else if destination == "NovelPageView" {
+                        NovelPageView()
+                    } else if destination == "AddNewNovelTextView" {
+                        AddNewNovelTextView(presenter: AddNewNovelTextPresenter)
+                    }
                 }
             }
         }
@@ -97,8 +114,17 @@ struct UserPageView: View {
 struct UserPageView_Previews: PreviewProvider {
     static var previews: some View {
         let appState = AppState()
+        let apiClient = APIClient()
         let router = UserPageRouter()
-        let presenter = UserPagePresenter(router: router, appState: appState)
-        UserPageView(presenter: presenter).environmentObject(appState)
+        let interactor = UserPageInteractor(appState: appState, apiClient: apiClient)
+        let presenter = UserPagePresenter(router: router, appState: appState, interactor: interactor)
+        let makeNewNovelrouter = MakeNewNovelRouter()
+        let loginInteractor = LoginInteractor(apiClient: apiClient, appState: appState)
+        let makeNewNovelInteractor = MakeNewNovelInteractor(apiClient: apiClient, appState: appState, loginInteractor: loginInteractor)
+        let makeNewNovelPresenter = MakeNewNovelPresenter(interactor: makeNewNovelInteractor, loginInteractor: loginInteractor, router: makeNewNovelrouter, appState: appState)
+        let AddNewNovelTextInteractor = AddNewNovelTextInteractor(apiClient: apiClient, appState: appState)
+        let AddNewNovelTextRouter = AddNewNovelTextRouter()
+        let AddNewNovelTextPresenter = AddNewNovelTextPresenter(interactor: AddNewNovelTextInteractor, router: AddNewNovelTextRouter, appState: appState)
+        UserPageView(presenter: presenter, makeNewNovelPresenter: makeNewNovelPresenter, AddNewNovelTextPresenter: AddNewNovelTextPresenter).environmentObject(appState)
     }
 }

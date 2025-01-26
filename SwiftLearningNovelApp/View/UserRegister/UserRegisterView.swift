@@ -12,7 +12,6 @@ struct UserRegisterView: View {
     var presenter: UserRegisterPresenterProtocol
     @State var inputPasswd = ""
     @State var inputMail = ""
-    //    @State private var user: UserData? = nil
     private let userDefaultsManager = UserDefaultsManager()
     
     @AppStorage("storedUser")private var storedUserData: String = ""
@@ -33,7 +32,7 @@ struct UserRegisterView: View {
                     }){
                         Text("マイページへ")
                             .padding()
-                            .frame(width: 120, height: 50)
+                            .frame(width: 200, height: 50)
                             .background(Color.deeepGreen)
                             .foregroundColor(Color.mainCream)
                             .cornerRadius(.infinity)

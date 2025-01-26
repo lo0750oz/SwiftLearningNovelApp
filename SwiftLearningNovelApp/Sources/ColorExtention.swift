@@ -11,5 +11,5 @@ extension Color {
     static let mainCream = Color("main")
     static let deeepGreen = Color("mainGreen")
     static let middeleGreen = Color("subGreen")
-    static let lightGreen = Color("lightGreen")
+    static let lightSubGreen = Color("lightGreen")
 }

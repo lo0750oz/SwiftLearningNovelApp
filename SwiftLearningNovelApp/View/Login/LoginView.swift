@@ -92,7 +92,7 @@ struct LoginView_Previews: PreviewProvider {
         let appState = AppState()
         let router = LoginRouter()
         let apiClient = APIClient()
-        let interactor = LoginInteractor(apiClient: apiClient)
+        let interactor = LoginInteractor(apiClient: apiClient, appState: appState)
         let presenter = LoginPresenter(router: router, appState: appState, loginInteractor: interactor)
         LoginView(presenter: presenter).environmentObject(appState)
     }

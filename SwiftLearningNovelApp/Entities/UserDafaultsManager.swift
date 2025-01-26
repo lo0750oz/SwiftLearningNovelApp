@@ -26,13 +26,24 @@ class UserDefaultsManager {
     
     // ユーザー情報を取得
     func getUser() -> UserData? {
-        if let savedUser = UserDefaults.standard.object(forKey: userKey) as? Data {
+        if let savedUserString = UserDefaults.standard.string(forKey: userKey), // String型で取得
+           let savedUserData = savedUserString.data(using: .utf8) { // StringをDataに変換
             let decoder = JSONDecoder()
-            if let loadedUser = try? decoder.decode(UserData.self, from: savedUser) {
+            if let loadedUser = try? decoder.decode(UserData.self, from: savedUserData) { // DataをUserDataにデコード
                 return loadedUser
             }
         }
         return nil
+    }
+    
+    // ユーザー情報を更新
+    func updateUser(updateBlock: (inout UserData) -> Void) {
+        if var user = getUser() {
+            updateBlock(&user) // 引数のクロージャを使ってプロパティを更新
+            saveUser(user)     // 更新後のユーザー情報を保存
+        } else {
+            print("ユーザー情報が存在しません")
+        }
     }
     
     // ユーザー情報を削除

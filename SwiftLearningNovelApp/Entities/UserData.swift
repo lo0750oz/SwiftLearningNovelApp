@@ -11,7 +11,7 @@ struct UserData: Codable, Identifiable, Equatable{
     let id: String
     let password: String
     let mail: String?
-    let novelSpace: String?
+    var novelSpace: String?
     
     static func == (lhs: UserData, rhs: UserData) -> Bool {
         return lhs.id == rhs.id &&
