@@ -17,6 +17,7 @@
 		2D6E756D2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E756C2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift */; };
 		2D6E757C2C845D3A0074AA9B /* NovelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E757B2C845D3A0074AA9B /* NovelApp.swift */; };
 		2D6E75822C8465C80074AA9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E75812C8465C80074AA9B /* HomeView.swift */; };
+		2D6FF28B2D4F994800CD9171 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D6FF2892D4F994800CD9171 /* db.json */; };
 		2D88BA5D2C8878960083563A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA5C2C8878960083563A /* LoginView.swift */; };
 		2D88BA602C887D850083563A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA5F2C887D850083563A /* AppState.swift */; };
 		2D88BA622C8880690083563A /* UserPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D88BA612C8880690083563A /* UserPageView.swift */; };
@@ -88,6 +89,7 @@
 		2D6E756C2C8212600074AA9B /* SwiftLearningNovelAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningNovelAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2D6E757B2C845D3A0074AA9B /* NovelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelApp.swift; sourceTree = "<group>"; };
 		2D6E75812C8465C80074AA9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2D6FF2892D4F994800CD9171 /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
 		2D88BA5C2C8878960083563A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2D88BA5F2C887D850083563A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2D88BA612C8880690083563A /* UserPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		2D6E753E2C82125B0074AA9B = {
 			isa = PBXGroup;
 			children = (
+				2D6FF28A2D4F994800CD9171 /* MockServer */,
 				2D6E75492C82125B0074AA9B /* SwiftLearningNovelApp */,
 				2D6E755F2C8212600074AA9B /* SwiftLearningNovelAppTests */,
 				2D6E75692C8212600074AA9B /* SwiftLearningNovelAppUITests */,
@@ -235,6 +238,14 @@
 				2D6E757B2C845D3A0074AA9B /* NovelApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		2D6FF28A2D4F994800CD9171 /* MockServer */ = {
+			isa = PBXGroup;
+			children = (
+				2D6FF2892D4F994800CD9171 /* db.json */,
+			);
+			path = MockServer;
 			sourceTree = "<group>";
 		};
 		2D792E322C84747F005E26A1 /* Interactors */ = {
@@ -615,6 +626,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6FF28B2D4F994800CD9171 /* db.json in Resources */,
 				2D6E75522C82125F0074AA9B /* Preview Assets.xcassets in Resources */,
 				2D6E754F2C82125F0074AA9B /* Assets.xcassets in Resources */,
 			);

@@ -14,6 +14,7 @@ protocol AddNewNovelTextRouterProtocol {
 struct AddNewNovelTextRouter: AddNewNovelTextRouterProtocol {
     func navigateToNovelPageView(appState: AppState) {
         print("Router: 小説ページに遷移")
+        print("ルート情報: \(appState.navigationPath)")
         appState.navigationPath.append("NovelPageView")
     }
 }
